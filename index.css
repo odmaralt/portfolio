@@ -1,0 +1,152 @@
+/* html,body{
+  background:#000;
+  margin:0;
+}
+.centered{
+  width:400px;
+  height:400px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#000;
+  filter: blur(10px) contrast(20);
+}
+.blob-1,.blob-2{
+  width:70px;
+  height:70px;
+  position:absolute;
+  background:#fff;
+  border-radius:50%;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+}
+.blob-1{
+  left:20%;
+  animation:osc-l 2.5s ease infinite;
+}
+.blob-2{
+  left:80%;
+  animation:osc-r 2.5s ease infinite;
+  background:#0ff;
+}
+@keyframes osc-l{
+  0%{left:20%;}
+  50%{left:50%;}
+  100%{left:20%;}
+}
+@keyframes osc-r{
+  0%{left:80%;}
+  50%{left:50%;}
+  100%{left:80%;}
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+#navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 35vw;
+}
+#navBar a {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: rgb(0, 0, 0);
+  font-family: "Gantari", sans-serif;
+  font-weight: 300;
+  text-transform: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+#intro {
+  height: 150vh;
+  background-color: rgb(255, 241, 138);
+}
+#about {
+  height: 100vh;
+  background-color: rgb(146, 146, 255);
+  line-height: 45px;
+}
+html {
+  scroll-behavior: smooth;
+}
+#skills {
+  height: 100vh;
+  background-color: rgb(134, 255, 158);
+}
+#projects {
+  height: 100vh;
+  background-color: rgb(255, 202, 146);
+}
+#contact {
+  height: 100vh;
+  background-color: rgb(255, 142, 213);
+}
+#title {
+  padding-top: 20%;
+  padding-left: 20%;
+}
+.ml2 {
+  font-size: 24px;
+  color: white;
+  font-family: "Mingzat", sans-serif;
+}
+.ml3 {
+  font-family: "Mingzat", sans-serif;
+  color: white;
+
+  font-size: 24px;
+}
+.ml4 {
+  font-family: "Mingzat", sans-serif;
+  font-size: 24px;
+  color: white;
+}
+.ml5 {
+  font-family: "Mingzat", sans-serif;
+  color: white;
+
+  font-size: 24px;
+}
+#side {
+  float: left;
+  color: white;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  font-size: 200px;
+  font-family: "Anton", sans-serif;
+  vertical-align: middle;
+  justify-content: center;
+  display: flex;
+  padding-right: 30px;
+}
+
+#rightSide {
+  float: right;
+}
+#side2 {
+  float: left;
+  color: white;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  font-size: 200px;
+  font-family: "Anton", sans-serif;
+  vertical-align: middle;
+  justify-content: center;
+  display: flex;
+  padding-right: 50px;
+  padding-left: 0px;
+}
+
+#rightSide1 {
+  float: right;
+}
