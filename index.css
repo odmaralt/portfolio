@@ -59,37 +59,65 @@
   color: rgb(0, 0, 0);
   font-family: "Gantari", sans-serif;
   font-weight: 300;
+  list-style: none;
+
   text-transform: none;
   text-decoration: none;
 }
-
 body {
-  background-color: rgb(255, 255, 255);
+  background-image: url(https://images.unsplash.com/photo-1604079628040-94301bb21b91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-#intro {
-  height: 150vh;
-  background-color: rgb(255, 241, 138);
-}
 #about {
   height: 100vh;
-  background-color: rgb(146, 146, 255);
+  background-image: url(https://images.unsplash.com/photo-1604076850742-4c7221f3101b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
   line-height: 45px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  scroll-snap-stop: always;
 }
 html {
   scroll-behavior: smooth;
 }
 #skills {
   height: 100vh;
-  background-color: rgb(134, 255, 158);
+  /* background: linear-gradient(
+    to bottom,
+    rgb(146, 146, 255) 0%,
+    rgb(146, 146, 255) 40%,
+    rgb(134, 255, 158) 40%,
+    rgb(134, 255, 158) 40%
+  ); */
+
+  scroll-snap-stop: always;
 }
 #projects {
   height: 100vh;
-  background-color: rgb(255, 202, 146);
+  /* background: linear-gradient(
+    to bottom,
+    rgb(134, 255, 158) 0%,
+    rgb(134, 255, 158) 50%,
+    rgb(255, 202, 146) 50%,
+    rgb(255, 202, 146) 50%
+  ); */
+  scroll-snap-stop: always;
 }
 #contact {
   height: 100vh;
-  background-color: rgb(255, 142, 213);
+  /* background: linear-gradient(
+    to bottom,
+    rgb(255, 202, 146) 0%,
+    rgb(255, 202, 146) 50%,
+    rgb(255, 142, 213) 50%,
+    rgb(255, 142, 213) 50%
+  ); */
+  scroll-snap-stop: always;
 }
 #title {
   padding-top: 20%;
@@ -99,10 +127,12 @@ html {
   font-size: 24px;
   color: white;
   font-family: "Mingzat", sans-serif;
+  padding-right: 80px;
 }
 .ml3 {
   font-family: "Mingzat", sans-serif;
   color: white;
+  padding-right: 80px;
 
   font-size: 24px;
 }
@@ -110,43 +140,220 @@ html {
   font-family: "Mingzat", sans-serif;
   font-size: 24px;
   color: white;
+  padding-right: 80px;
 }
 .ml5 {
   font-family: "Mingzat", sans-serif;
   color: white;
+  padding-right: 80px;
 
   font-size: 24px;
-}
-#side {
-  float: left;
-  color: white;
-  text-transform: uppercase;
-  transform: rotate(-90deg);
-  font-size: 200px;
-  font-family: "Anton", sans-serif;
-  vertical-align: middle;
-  justify-content: center;
-  display: flex;
-  padding-right: 30px;
 }
 
 #rightSide {
   float: right;
-}
-#side2 {
-  float: left;
-  color: white;
-  text-transform: uppercase;
-  transform: rotate(-90deg);
-  font-size: 200px;
-  font-family: "Anton", sans-serif;
-  vertical-align: middle;
-  justify-content: center;
-  display: flex;
-  padding-right: 50px;
-  padding-left: 0px;
+  padding-right: 60px;
+  padding-top: 180px;
 }
 
 #rightSide1 {
   float: right;
+}
+
+#rightSide2 {
+  float: right;
+  display: flex;
+}
+
+#rightSide3 {
+  float: right;
+}
+.box {
+  padding: 70px;
+  background-color: white;
+  margin: 40px;
+  display: flex;
+}
+.box2 {
+  padding: 70px;
+  background-color: white;
+  margin: 40px;
+  display: flex;
+  margin-right: 200px;
+}
+#logo {
+  color: black;
+}
+li {
+  list-style: none;
+  padding-top: 30px;
+}
+
+#aboutTag::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 0.1em;
+  background-color: rgb(255, 105, 163);
+  opacity: 0;
+  transition: opacity 250ms, transform 250ms;
+}
+
+#aboutTag:hover::after,
+#aboutTag:focus::after {
+  opacity: 1;
+  transform: translate3d(154%, 0.1em, 0);
+}
+
+#skillTag::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 65px;
+  height: 0.1em;
+  background-color: rgb(255, 105, 163);
+  opacity: 0;
+  transition: opacity 250ms, transform 250ms;
+}
+
+#skillTag:hover::after,
+#skillTag:focus::after {
+  opacity: 1;
+  transform: translate3d(340%, 0.1em, 0);
+}
+#projectsTag::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 0.1em;
+  background-color: rgb(255, 105, 163);
+  opacity: 0;
+  transition: opacity 250ms, transform 250ms;
+}
+
+#projectsTag:hover::after,
+#projectsTag:focus::after {
+  opacity: 1;
+  transform: translate3d(420%, 0.1em, 0);
+}
+
+#contactTag::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 0.1em;
+  background-color: rgb(255, 105, 163);
+  opacity: 0;
+  transition: opacity 250ms, transform 250ms;
+}
+
+#contactTag:hover::after,
+#contactTag:focus::after {
+  opacity: 1;
+  transform: translate3d(585%, 0.1em, 0);
+}
+
+li:nth-child(2) a::after {
+  opacity: 1;
+  transform: translate3d(-4%, 0, 0);
+}
+
+li:nth-child(2) a:hover::after,
+li:nth-child(2) a:focus::after {
+  transform: translate3d(0, 0, 0);
+}
+h2 {
+  font-size: 200px;
+  /* position: relative; */
+  font-weight: bold;
+  font-family: "Anton", sans-serif;
+  color: #fff;
+  letter-spacing: 2px;
+  /* padding-top: 50%; */
+  /* display: block; */
+  vertical-align: middle;
+  padding-left: 30px;
+  text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%),
+    0 3px 0 hsl(174, 5%, 70%), 0 4px 0 hsl(174, 5%, 66%),
+    0 5px 0 hsl(174, 5%, 64%), 0 6px 0 hsl(174, 5%, 62%),
+    0 7px 0 hsl(174, 5%, 61%), 0 8px 0 hsl(174, 5%, 60%),
+    0 0 5px rgba(136, 136, 136, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2),
+    0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+h6 {
+  font-size: 100px;
+  /* position: relative; */
+  font-weight: bold;
+  font-family: "Anton", sans-serif;
+  color: #fff;
+  letter-spacing: 2px;
+  padding-top: 220px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.meter {
+  height: 10px;
+  position: relative;
+  background: #f3efe6;
+  overflow: hidden;
+  width: 50%;
+  margin-bottom: 50px;
+  margin-right: 180px;
+  float: right;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+}
+
+.progress {
+  animation: progressBar 2s ease-in-out;
+  animation-fill-mode: both;
+}
+.progress1 {
+  animation: progressBar 2s ease-in-out;
+  animation-fill-mode: both;
+}
+.progress2 {
+  animation: progressBar 2s ease-in-out;
+  animation-fill-mode: both;
+}
+#jsProgress {
+  background-color: #ce373a;
+}
+#cssProgress {
+  background-color: #ce373a;
+}
+#htmlProgress {
+  background-color: #ce373a;
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+}
+.skillsss {
+  margin-left: 40%;
+  font-family: "Anton", sans-serif;
+  color: white;
+  font-size: 30px;
+  text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%),
+    0 3px 0 hsl(174, 5%, 70%), 0 4px 0 hsl(174, 5%, 66%),
+    0 5px 0 hsl(174, 5%, 64%), 0 6px 0 hsl(174, 5%, 62%),
+    0 7px 0 hsl(174, 5%, 61%), 0 8px 0 hsl(174, 5%, 60%),
+    0 0 5px rgba(136, 136, 136, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2),
+    0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
 }
