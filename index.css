@@ -56,8 +56,8 @@
   padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
-  color: rgb(0, 0, 0);
-  font-family: "Gantari", sans-serif;
+  color: rgb(255, 255, 255);
+  font-family: "Mingzat", sans-serif;
   font-weight: 300;
   list-style: none;
 
@@ -70,6 +70,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
 }
 
 #about {
@@ -107,6 +108,7 @@ html {
     rgb(255, 202, 146) 50%
   ); */
   scroll-snap-stop: always;
+  display: flex;
 }
 #contact {
   height: 100vh;
@@ -161,7 +163,6 @@ html {
 }
 
 #rightSide2 {
-  float: right;
   display: flex;
 }
 
@@ -172,13 +173,34 @@ html {
   padding: 70px;
   background-color: white;
   margin: 40px;
+  height: 150px;
+  width: 150px;
+  background-position: center center;
   display: flex;
+  background-image: url(calc.png);
+  background-size: cover;
+}
+.box1 {
+  padding: 70px;
+  background-color: white;
+  margin: 40px;
+  height: 150px;
+  width: 150px;
+  background-position: center center;
+  display: flex;
+  background-image: url(ttgroup.png);
+  background-size: cover;
 }
 .box2 {
   padding: 70px;
   background-color: white;
   margin: 40px;
+  height: 150px;
+  width: 150px;
+  background-position: center center;
   display: flex;
+  background-image: url(game.png);
+  background-size: cover;
   margin-right: 200px;
 }
 #logo {
@@ -270,16 +292,16 @@ li:nth-child(2) a:focus::after {
   transform: translate3d(0, 0, 0);
 }
 h2 {
-  font-size: 200px;
+  font-size: 170px;
   /* position: relative; */
   font-weight: bold;
   font-family: "Anton", sans-serif;
   color: #fff;
   letter-spacing: 2px;
   /* padding-top: 50%; */
+  margin-left: 50px;
   /* display: block; */
   vertical-align: middle;
-  padding-left: 30px;
   text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%),
     0 3px 0 hsl(174, 5%, 70%), 0 4px 0 hsl(174, 5%, 66%),
     0 5px 0 hsl(174, 5%, 64%), 0 6px 0 hsl(174, 5%, 62%),
@@ -356,4 +378,69 @@ h6 {
     0 0 5px rgba(136, 136, 136, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2),
     0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2),
     0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+.slide-right {
+  width: 100%;
+  overflow: hidden;
+  margin-left: 0px;
+  max-width: 800px;
+}
+
+.slide-right h2 {
+  animation: 0.8s slide-right 0s forwards;
+  transform: translateX(-100%);
+}
+
+@keyframes slide-right {
+  to {
+    transform: translateX(0);
+  }
+}
+.slide-right1 {
+  overflow: hidden;
+  margin-left: 1px;
+  max-width: 900px;
+}
+
+.slide-right1 h2 {
+  animation: 0.8s slide-right 0s forwards;
+  transform: translateX(-100%);
+}
+
+@keyframes slide-right {
+  to {
+    transform: translateX(200%);
+  }
+}
+.slide-right2 {
+  width: 100%;
+  overflow: hidden;
+  margin-left: 50px;
+  max-width: 800px;
+}
+
+.slide-right2 h2 {
+  animation: 0.8s slide-right 0s forwards;
+  transform: translateX(-100%);
+}
+
+@keyframes slide-right {
+  to {
+    transform: translateX(0);
+  }
+}
+.contactLinks {
+  color: white;
+  font-family: "Anton", sans-serif;
+  font-size: 30px;
+  text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%),
+    0 3px 0 hsl(180, 2%, 34%), 0 4px 0 hsl(174, 5%, 66%),
+    0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin-left: 120px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
+.contactLinks:hover {
+  font-size: 32px;
 }

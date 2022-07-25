@@ -41,7 +41,7 @@
     </div> -->
 
     <div id="navBar">
-      <a href="#intro" id="logo">OT</a>
+      <a>OT</a>
       <li>
         <a id="aboutTag" href="#about">About</a>
       </li>
@@ -57,6 +57,7 @@
     </div>
     <div id="about">
       <h6>Hello, I am Odmaral Tumenjargal</h6>
+
       <div id="rightSide">
         <h1 class="ml2">Software developer</h1>
         <h1 class="ml3">Game developer</h1>
@@ -65,7 +66,9 @@
       </div>
     </div>
     <div id="skills">
-      <h2>Skills</h2>
+      <div class="slide-right">
+        <h2>Skills</h2>
+      </div>
 
       <p class="skillsss">HTML</p>
 
@@ -91,20 +94,30 @@
     </div>
 
     <div id="projects">
-      <h2>Projects</h2>
+      <div class="slide-right1">
+        <h2>Projects</h2>
+      </div>
       <div id="rightSide2">
-        <div>
-          <div class="box">Game</div>
-          <div class="box">Game</div>
+        <!-- <div>
+          <div class="box"></div>
+          <div class="box1"></div>
         </div>
         <div>
-          <div class="box2">Game</div>
-          <div class="box2">Game</div>
-        </div>
+          <div class="box2"></div>
+          <div class="box2"></div>
+        </div> -->
       </div>
     </div>
     <div id="contact">
-      <h2>Contact</h2>
+      <div class="slide-right2">
+        <h2>Contact</h2>
+      </div>
+      <a class="contactLinks" href="mailto: oddy976@gmail.com"
+        >Email: oddy976@gmail.com</a
+      >
+      <a class="contactLinks" href="https://github.com/odmaralt"
+        >GitHub: odmaralt</a
+      >
       <div id="rightSide3"></div>
     </div>
     <script
@@ -138,7 +151,6 @@
     <script src="index.js"></script>
 
     <script>
-      // Wrap every letter in a span
       var textWrapper = document.querySelector(".ml2");
       textWrapper.innerHTML = textWrapper.textContent.replace(
         /\S/g,
@@ -227,6 +239,21 @@
           easing: "easeOutExpo",
           delay: 1000,
         });
+      document.addEventListener("DOMContentLoaded", () => {
+        let waypoint = new Waypoint({
+          element: document.querySelector(".ml2"),
+          handler: function () {
+            anime({
+              targets: ".ml2",
+              easing: "easeOutExpo",
+              translateX: [-100, 0],
+              opacity: [0, 1],
+              delay: 300,
+            });
+          },
+          context: document.querySelector("body"),
+        });
+      });
     </script>
   </body>
 </html>
